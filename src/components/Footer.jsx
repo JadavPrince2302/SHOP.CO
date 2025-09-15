@@ -1,10 +1,10 @@
 import React from "react";
 import { Mail, Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
     <div className="relative mt-[90px]">
-
       <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="bg-black rounded-3xl px-6 sm:px-8 lg:px-12 py-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-white w-full lg:max-w-[550px] text-center lg:text-left">
@@ -33,7 +33,6 @@ const Footer = () => {
       <div className="bg-[#F0F0F0] pt-20 sm:pt-24 pb-10 sm:pb-12 -mt-12 sm:-mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row justify-evenly gap-12 sm:gap-16">
-    
             <div className="flex-1 max-w-lg text-left lg:text-left">
               <h1 className="text-3xl sm:text-[34px] font-integral font-black text-black mb-6">
                 SHOP.CO
@@ -60,24 +59,24 @@ const Footer = () => {
                 HELP
               </h3>
               <div className="flex flex-col gap-4 sm:gap-5">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-gray-600 font-satoshi hover:text-black transition-colors text-sm sm:text-base"
                 >
                   Privacy statement
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-gray-600 font-satoshi hover:text-black transition-colors text-sm sm:text-base"
                 >
                   Terms & Conditions
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="text-gray-600 font-satoshi hover:text-black transition-colors text-sm sm:text-base"
                 >
                   Cookie Policy
-                </a>
+                </Link>
               </div>
             </div>
           </div>

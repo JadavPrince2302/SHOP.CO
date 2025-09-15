@@ -23,7 +23,7 @@ const Header = () => {
             SHOP.CO
           </Link>
 
-          <div className="hidden md:flex flex-1 items-center justify-start gap-8">
+          <div className="hidden lg:flex flex-1 items-center justify-start gap-8">
             <ul className="flex gap-6 font-satoshi text-[16px]">
               <li className="flex gap-2 items-center cursor-pointer pl-[40px]">
                 <span>Shop</span> <ChevronDown size={16} />
@@ -47,7 +47,7 @@ const Header = () => {
             <CircleUserRound className="cursor-pointer" />
             <button
               onClick={() => setIsSidebarOpen(true)}
-              className="md:hidden text-black"
+              className="lg:hidden text-black"
             >
               <Menu size={28} />
             </button>
