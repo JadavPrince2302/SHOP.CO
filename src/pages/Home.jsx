@@ -69,8 +69,7 @@ const Home = () => {
         {visibleTshirts < tShirtData.length && (
           <button
             onClick={handleViewAll}
-             className="text-center rounded-[62px] font-satoshi border border-black/10 px-[54px] py-4 cursor-pointer"
-           
+            className="text-center rounded-[62px] font-satoshi border border-black/10 px-[54px] py-4 cursor-pointer"
           >
             View All
           </button>
@@ -113,8 +112,15 @@ const Home = () => {
                     <CarouselItem key={index}>
                       <div className="flex flex-col justify-center gap-3 items-center">
                         <p className="font-bold font-satoshi text-sm sm:text-[16px] text-center">
-                          Our experience with your service has been
-                          exceptional...
+                          Our experience with your service has been exceptional.
+                          The platform provided us with a seamless hiring
+                          process, from posting job openings to finding the
+                          perfect candidate. The user-friendly interface made it
+                          easy for our team to collaborate, review applications,
+                          and schedule interviews. Thanks to your service, we
+                          were able to hire a highly qualified candidate within
+                          a short timeframe. It has become an invaluable tool
+                          for our recruitment efforts
                         </p>
                         <div className="flex flex-col gap-1 justify-center items-center">
                           <span className="font-satoshi text-sm sm:text-[16px] font-bold">
@@ -128,8 +134,8 @@ const Home = () => {
                     </CarouselItem>
                   ))}
               </CarouselContent>
-              <CarouselPrevious className="-left-6 sm:-left-[41px] bg-blue-700 text-white hover:bg-blue-700" />
-              <CarouselNext className="-right-6 sm:-right-[41px] bg-blue-700 text-white hover:bg-blue-700" />
+              <CarouselPrevious className="-left-6 sm:-left-[41px] bg-blue-700 text-white hover:bg-blue-700 hover:text-white" />
+              <CarouselNext className="-right-6 sm:-right-[41px] bg-blue-700 text-white hover:bg-blue-700 hover:text-white" />
             </Carousel>
           </div>
         </div>
