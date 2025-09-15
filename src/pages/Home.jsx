@@ -1,16 +1,20 @@
 import React from "react";
 import Button from "../components/Button/Button";
+import shirtData from "../data/shirt.json";
+import tShirtData from "../data/t-shirt.json";
+import Card from "../components/Card/Card";
+import star from "../assets/icons/star.svg";
 
 const Home = () => {
   return (
     <>
       <div className="min-h-screen bg-gray-100 flex">
-        <div className="max-w-[1240px] mx-auto py-[103px] flex flex-col gap-16">
+        <div className="max-w-[1240px] mx-auto py-[90px] flex flex-col gap-11">
           <div className="max-w-[577px] flex flex-col gap-8 relative">
             <div>
-              <span className="font-integral text-[64px] font-black leading-16">
+              <p className="font-integral text-[64px] font-black leading-16">
                 FIND CLOTHES THAT MATCHES YOUR STYLE
-              </span>
+              </p>
             </div>
             <div className="text-center font-satoshi text-[16px] opacity-[0.6]">
               <p>
@@ -51,7 +55,7 @@ const Home = () => {
               <Button
                 variant="primary"
                 size="lg"
-                className="!rounded-full !px-[64px] !py-[16px]"
+                className="!rounded-full !px-[54px] !py-[16px] !text-[16px] font-bold"
               >
                 Shop Now
               </Button>
@@ -59,24 +63,72 @@ const Home = () => {
           </div>
           <div className="flex flex-wrap gap-4">
             <div className="pl-3">
-              <div><span className="text-[40px] font-satoshi font-black">200+</span></div>
-              <div className="text-[12px] font-satoshi opacity-[0.6]">
+              <div>
+                <span className="text-[40px] font-satoshi font-black">
+                  200+
+                </span>
+              </div>
+              <div className="text-[16px] font-satoshi opacity-[0.6]">
                 International Brands
               </div>
             </div>
-             <div className="pl-3 border-l border-gray-300">
-              <div><span className="text-[40px] font-satoshi font-black">2000+</span></div>
-              <div className="text-[12px] font-satoshi opacity-[0.6]">
+            <div className="pl-3 border-l border-gray-300">
+              <div>
+                <span className="text-[40px] font-satoshi font-black">
+                  2000+
+                </span>
+              </div>
+              <div className="text-[16px] font-satoshi opacity-[0.6]">
                 High-Quality Products
               </div>
             </div>
-             <div className="pl-3 border-l border-gray-300">
-              <div><span className="text-[40px] font-satoshi font-black">30,000+</span></div>
-              <div className="text-[12px] font-satoshi opacity-[0.6]">
+            <div className="pl-3 border-l border-gray-300">
+              <div>
+                <span className="text-[40px] font-satoshi font-black">
+                  30,000+
+                </span>
+              </div>
+              <div className="text-[16px] font-satoshi opacity-[0.6]">
                 Happy Customers
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="max-w-[1240px] mx-auto flex justify-center flex-col items-center gap-[55px]">
+        <div className="pt-16">
+          <span className="font-black font-integral text-5xl ">
+            New Arrivals
+          </span>
+        </div>
+        <div className="grid gap-5 w-full grid-cols-[repeat(auto-fill,minmax(295px,1fr))] place-items-center">
+          {tShirtData.map((item, index) => (
+            <Card
+              key={index}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              icon={star}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="max-w-[1240px] mx-auto flex justify-center flex-col items-center gap-[55px]">
+        <div className="pt-16">
+          <span className="font-black font-integral text-5xl ">
+            top selling
+          </span>
+        </div>
+        <div className="grid gap-5 w-full grid-cols-[repeat(auto-fill,minmax(295px,1fr))] place-items-center">
+          {shirtData.map((item, index) => (
+            <Card
+              key={index}
+              name={item.name}
+              image={item.image}
+              price={item.price}
+              icon={star}
+            />
+          ))}
         </div>
       </div>
     </>
